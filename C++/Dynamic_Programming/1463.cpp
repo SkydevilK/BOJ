@@ -8,8 +8,10 @@ int main(void)
 	cin >> N;
 	int* dp = new int[N + 1];
 	dp[1] = 0;
-	dp[2] = 1;
-	dp[3] = 1;
+	if (N > 1)
+		dp[2] = 1;
+	if (N > 2)
+		dp[3] = 1;
 	for (int i = 4; i <= N; ++i)
 	{
 		min = dp[i - 1] + 1;
